@@ -88,7 +88,7 @@ export const Login: React.FC<Props> = ({ users, onLogin }) => {
           <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-600 rounded-2xl shadow-xl shadow-primary-900/40 mb-2">
             <Egg size={32} className="text-white" />
           </div>
-          <h1 className="text-3xl font-bold text-white tracking-tight">MNT App</h1>
+          <h1 className="text-3xl font-bold text-white tracking-tight">App de Gestión</h1>
           <p className="text-slate-400 text-sm">Sistema de Mantenimiento · Molino Harinero</p>
         </div>
 
@@ -220,7 +220,7 @@ export const Login: React.FC<Props> = ({ users, onLogin }) => {
             <div className="bg-primary-600/20 border border-primary-500/30 p-2.5 rounded-xl">
               <Egg size={24} className="text-primary-400" />
             </div>
-            <span className="text-white/60 font-semibold tracking-widest text-sm uppercase">MNT App</span>
+            <span className="text-white/60 font-semibold tracking-widest text-sm uppercase">App de Gestión</span>
           </div>
 
           {/* Centro: tagline grande */}

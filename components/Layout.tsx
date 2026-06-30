@@ -91,7 +91,7 @@ export const Layout: React.FC<LayoutProps> = ({ currentUser, currentView, onNavi
                 <Egg className="text-white" size={22} />
               </div>
               <div className="min-w-0">
-                <h1 className="text-base font-bold tracking-tight text-white leading-tight">MNT App</h1>
+                <h1 className="text-base font-bold tracking-tight text-white leading-tight">App de Gestión</h1>
                 <p className="text-[10px] text-slate-400 leading-tight">Sistema de Mantenimiento</p>
               </div>
             </>
@@ -205,7 +205,7 @@ export const Layout: React.FC<LayoutProps> = ({ currentUser, currentView, onNavi
             <div className="bg-primary-600 p-1.5 rounded-lg">
               <Egg className="text-white" size={20} />
             </div>
-            <span className="font-bold">MNT App</span>
+            <span className="font-bold">App de Gestión</span>
           </div>
           <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             <Menu size={24} />
