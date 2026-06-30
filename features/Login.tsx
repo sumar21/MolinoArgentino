@@ -89,7 +89,7 @@ export const Login: React.FC<Props> = ({ users, onLogin }) => {
             <Egg size={32} className="text-white" />
           </div>
           <h1 className="text-3xl font-bold text-white tracking-tight">App de Gestión</h1>
-          <p className="text-slate-400 text-sm">Sistema de Mantenimiento · Molino Harinero</p>
+          <p className="text-slate-400 text-sm">Sistema de Gestión</p>
         </div>
 
         {/* Form card */}

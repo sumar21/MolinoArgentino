@@ -92,7 +92,7 @@ export const Layout: React.FC<LayoutProps> = ({ currentUser, currentView, onNavi
               </div>
               <div className="min-w-0">
                 <h1 className="text-base font-bold tracking-tight text-white leading-tight">App de Gestión</h1>
-                <p className="text-[10px] text-slate-400 leading-tight">Sistema de Mantenimiento</p>
+                <p className="text-[10px] text-slate-400 leading-tight">Sistema de Gestión</p>
               </div>
             </>
           )}
