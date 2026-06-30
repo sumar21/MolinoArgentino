@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { User, UserRole } from '../types';
-import { Wheat, Eye, EyeOff, LogIn, Zap } from 'lucide-react';
+import { Egg, Eye, EyeOff, LogIn, Zap } from 'lucide-react';
 
 interface Props {
   users: User[];
@@ -86,7 +86,7 @@ export const Login: React.FC<Props> = ({ users, onLogin }) => {
         {/* Logo */}
         <div className="text-center space-y-2">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-600 rounded-2xl shadow-xl shadow-primary-900/40 mb-2">
-            <Wheat size={32} className="text-white" />
+            <Egg size={32} className="text-white" />
           </div>
           <h1 className="text-3xl font-bold text-white tracking-tight">MNT App</h1>
           <p className="text-slate-400 text-sm">Sistema de Mantenimiento · Molino Harinero</p>
@@ -218,7 +218,7 @@ export const Login: React.FC<Props> = ({ users, onLogin }) => {
           {/* Logo arriba */}
           <div className="flex items-center gap-3">
             <div className="bg-primary-600/20 border border-primary-500/30 p-2.5 rounded-xl">
-              <Wheat size={24} className="text-primary-400" />
+              <Egg size={24} className="text-primary-400" />
             </div>
             <span className="text-white/60 font-semibold tracking-widest text-sm uppercase">MNT App</span>
           </div>
