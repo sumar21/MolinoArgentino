@@ -208,9 +208,9 @@ export const Login: React.FC<Props> = ({ users, onLogin }) => {
 
         {/* Círculos de acento */}
         <div className="absolute top-[-120px] right-[-120px] w-96 h-96 rounded-full opacity-20"
-          style={{ background: 'radial-gradient(circle, #2563eb, transparent 70%)' }} />
+          style={{ background: 'radial-gradient(circle, #a05b38, transparent 70%)' }} />
         <div className="absolute bottom-[-80px] left-[-80px] w-72 h-72 rounded-full opacity-15"
-          style={{ background: 'radial-gradient(circle, #1d4ed8, transparent 70%)' }} />
+          style={{ background: 'radial-gradient(circle, #834733, transparent 70%)' }} />
 
         {/* Contenido centrado */}
         <div className="relative z-10 flex flex-col justify-between p-12 w-full">
@@ -234,8 +234,8 @@ export const Login: React.FC<Props> = ({ users, onLogin }) => {
                 <span className="text-transparent" style={{
                   backgroundClip: 'text',
                   WebkitBackgroundClip: 'text',
-                  backgroundImage: 'linear-gradient(90deg, #60a5fa, #2563eb)'
-                }}>del molino</span>
+                  backgroundImage: 'linear-gradient(90deg, #c5875e, #a05b38)'
+                }}>de tu empresa</span>
                 <br />en un lugar.
               </h2>
             </div>
