@@ -227,7 +227,7 @@ export const Login: React.FC<Props> = ({ users, onLogin }) => {
           <div className="space-y-6">
             <div>
               <p className="text-primary-400 text-sm font-bold uppercase tracking-widest mb-3">
-                Gestión de Mantenimiento
+                Gestión Operativa
               </p>
               <h2 className="text-white font-bold leading-tight" style={{ fontSize: '2.6rem' }}>
                 Todo el control<br />
