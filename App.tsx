@@ -43,6 +43,9 @@ import {
 } from './types';
 import { IncidentReport } from './features/IncidentReport';
 import { Login } from './features/Login';
+import { Calidad } from './features/Calidad';
+import { Produccion } from './features/Produccion';
+import { Indicadores } from './features/Indicadores';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -451,6 +454,12 @@ function App() {
           onCreateWorkOrder={handleCreateWorkOrder}
         />
       )}
+
+      {currentView === 'calidad' && <Calidad />}
+
+      {currentView === 'produccion' && <Produccion />}
+
+      {currentView === 'indicadores' && <Indicadores />}
 
       {currentView === 'technician' && (
         <TechnicianView

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { User, UserRole } from '../types';
-import { Wheat, Eye, EyeOff, LogIn, Zap } from 'lucide-react';
+import { Egg, Eye, EyeOff, LogIn, Zap } from 'lucide-react';
 
 interface Props {
   users: User[];
@@ -86,10 +86,10 @@ export const Login: React.FC<Props> = ({ users, onLogin }) => {
         {/* Logo */}
         <div className="text-center space-y-2">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-600 rounded-2xl shadow-xl shadow-primary-900/40 mb-2">
-            <Wheat size={32} className="text-white" />
+            <Egg size={32} className="text-white" />
           </div>
-          <h1 className="text-3xl font-bold text-white tracking-tight">MNT App</h1>
-          <p className="text-slate-400 text-sm">Sistema de Mantenimiento · Molino Harinero</p>
+          <h1 className="text-3xl font-bold text-white tracking-tight">App de Gestión</h1>
+          <p className="text-slate-400 text-sm">Sistema de Gestión</p>
         </div>
 
         {/* Form card */}
@@ -208,9 +208,9 @@ export const Login: React.FC<Props> = ({ users, onLogin }) => {
 
         {/* Círculos de acento */}
         <div className="absolute top-[-120px] right-[-120px] w-96 h-96 rounded-full opacity-20"
-          style={{ background: 'radial-gradient(circle, #2563eb, transparent 70%)' }} />
+          style={{ background: 'radial-gradient(circle, #a05b38, transparent 70%)' }} />
         <div className="absolute bottom-[-80px] left-[-80px] w-72 h-72 rounded-full opacity-15"
-          style={{ background: 'radial-gradient(circle, #1d4ed8, transparent 70%)' }} />
+          style={{ background: 'radial-gradient(circle, #834733, transparent 70%)' }} />
 
         {/* Contenido centrado */}
         <div className="relative z-10 flex flex-col justify-between p-12 w-full">
@@ -218,24 +218,24 @@ export const Login: React.FC<Props> = ({ users, onLogin }) => {
           {/* Logo arriba */}
           <div className="flex items-center gap-3">
             <div className="bg-primary-600/20 border border-primary-500/30 p-2.5 rounded-xl">
-              <Wheat size={24} className="text-primary-400" />
+              <Egg size={24} className="text-primary-400" />
             </div>
-            <span className="text-white/60 font-semibold tracking-widest text-sm uppercase">MNT App</span>
+            <span className="text-white/60 font-semibold tracking-widest text-sm uppercase">App de Gestión</span>
           </div>
 
           {/* Centro: tagline grande */}
           <div className="space-y-6">
             <div>
               <p className="text-primary-400 text-sm font-bold uppercase tracking-widest mb-3">
-                Gestión de Mantenimiento
+                Gestión Operativa
               </p>
               <h2 className="text-white font-bold leading-tight" style={{ fontSize: '2.6rem' }}>
                 Todo el control<br />
                 <span className="text-transparent" style={{
                   backgroundClip: 'text',
                   WebkitBackgroundClip: 'text',
-                  backgroundImage: 'linear-gradient(90deg, #60a5fa, #2563eb)'
-                }}>del molino</span>
+                  backgroundImage: 'linear-gradient(90deg, #c5875e, #a05b38)'
+                }}>de tu empresa</span>
                 <br />en un lugar.
               </h2>
             </div>

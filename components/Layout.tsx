@@ -4,8 +4,9 @@ import { User, UserRole } from '../types';
 import {
   LayoutDashboard, Wrench, Package, ShoppingCart, LogOut, Menu,
   HardHat, CalendarClock, Settings, Users, Shield, Cpu, Box,
-  ChevronDown, Tags, MessageSquare, Wheat, AlertTriangle,
+  ChevronDown, Tags, MessageSquare, Egg, AlertTriangle,
   PanelLeftClose, PanelLeftOpen,
+  ShieldCheck, Factory, Gauge,
 } from 'lucide-react';
 
 interface LayoutProps {
@@ -82,16 +83,16 @@ export const Layout: React.FC<LayoutProps> = ({ currentUser, currentView, onNavi
         <div className={`border-b border-slate-800 flex items-center h-[73px] shrink-0 ${collapsed ? 'justify-center px-0' : 'gap-3 px-5'}`}>
           {collapsed ? (
             <div className="bg-primary-600 p-2 rounded-lg shadow-lg">
-              <Wheat className="text-white" size={22} />
+              <Egg className="text-white" size={22} />
             </div>
           ) : (
             <>
               <div className="bg-primary-600 p-2 rounded-lg shadow-lg shadow-primary-500/20 shrink-0">
-                <Wheat className="text-white" size={22} />
+                <Egg className="text-white" size={22} />
               </div>
               <div className="min-w-0">
-                <h1 className="text-base font-bold tracking-tight text-white leading-tight">MNT App</h1>
-                <p className="text-[10px] text-slate-400 leading-tight">Sistema de Mantenimiento</p>
+                <h1 className="text-base font-bold tracking-tight text-white leading-tight">App de Gestión</h1>
+                <p className="text-[10px] text-slate-400 leading-tight">Sistema de Gestión</p>
               </div>
             </>
           )}
@@ -112,6 +113,17 @@ export const Layout: React.FC<LayoutProps> = ({ currentUser, currentView, onNavi
           <NavItem view="assets"       label="Equipos"             icon={Cpu}             restrictedTo={[UserRole.ADMIN, UserRole.PLANNER]} />
           <NavItem view="inventory"    label="Almacén & Stock"     icon={Package}         restrictedTo={[UserRole.ADMIN, UserRole.PLANNER]} />
           <NavItem view="purchasing"   label="Compras"             icon={ShoppingCart}    restrictedTo={[UserRole.ADMIN, UserRole.PLANNER]} />
+
+          {/* ── Gestión de Planta ── */}
+          {!collapsed && canSeeConfig && (
+            <div className="text-[10px] font-semibold text-slate-500 uppercase tracking-wider mt-4 mb-3 px-4">
+              Gestión de Planta
+            </div>
+          )}
+          <NavItem view="calidad"      label="Calidad e Inocuidad" icon={ShieldCheck}     restrictedTo={[UserRole.ADMIN, UserRole.PLANNER]} />
+          <NavItem view="produccion"   label="Producción"          icon={Factory}         restrictedTo={[UserRole.ADMIN, UserRole.PLANNER]} />
+          <NavItem view="indicadores"  label="Indicadores"         icon={Gauge}           restrictedTo={[UserRole.ADMIN, UserRole.PLANNER]} />
+
           <NavItem view="technician"   label="Mi Agenda"           icon={HardHat}         restrictedTo={[UserRole.TECHNICIAN]} />
           <NavItem view="incident"     label="Reportar Falla"      icon={AlertTriangle}   restrictedTo={[UserRole.OPERATIONS]} />
 
@@ -191,9 +203,9 @@ export const Layout: React.FC<LayoutProps> = ({ currentUser, currentView, onNavi
         <header className="md:hidden bg-slate-900 text-white p-4 flex justify-between items-center shadow-md z-20">
           <div className="flex items-center gap-2">
             <div className="bg-primary-600 p-1.5 rounded-lg">
-              <Wheat className="text-white" size={20} />
+              <Egg className="text-white" size={20} />
             </div>
-            <span className="font-bold">MNT App</span>
+            <span className="font-bold">App de Gestión</span>
           </div>
           <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             <Menu size={24} />
@@ -210,6 +222,9 @@ export const Layout: React.FC<LayoutProps> = ({ currentUser, currentView, onNavi
               <NavItem view="assets"       label="Equipos"            icon={Cpu}             restrictedTo={[UserRole.ADMIN, UserRole.PLANNER]} />
               <NavItem view="inventory"    label="Inventario"         icon={Package}         restrictedTo={[UserRole.ADMIN, UserRole.PLANNER]} />
               <NavItem view="purchasing"   label="Compras"            icon={ShoppingCart}    restrictedTo={[UserRole.ADMIN, UserRole.PLANNER]} />
+              <NavItem view="calidad"      label="Calidad e Inocuidad" icon={ShieldCheck}    restrictedTo={[UserRole.ADMIN, UserRole.PLANNER]} />
+              <NavItem view="produccion"   label="Producción"         icon={Factory}         restrictedTo={[UserRole.ADMIN, UserRole.PLANNER]} />
+              <NavItem view="indicadores"  label="Indicadores"        icon={Gauge}           restrictedTo={[UserRole.ADMIN, UserRole.PLANNER]} />
               <NavItem view="technician"   label="Mi Agenda"          icon={HardHat}         restrictedTo={[UserRole.TECHNICIAN]} />
               <NavItem view="incident"     label="Reportar Falla"     icon={AlertTriangle}   restrictedTo={[UserRole.OPERATIONS]} />
               {canSeeConfig && (

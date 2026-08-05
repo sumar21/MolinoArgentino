@@ -1,5 +1,5 @@
 {
-  "name": "MNT App",
+  "name": "App de Gestión",
   "description": "Advanced Industrial Maintenance ERP with Role-Based Access Control, Work Order Management, and Inventory Procurement flows.",
   "requestFramePermissions": [
     "camera"

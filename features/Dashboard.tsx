@@ -223,8 +223,8 @@ export const Dashboard: React.FC<DashboardProps> = ({ workOrders, inventory, pur
               <AreaChart data={activityData}>
                 <defs>
                   <linearGradient id="colorCreadas" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#2D666D" stopOpacity={0.1}/>
-                    <stop offset="95%" stopColor="#2D666D" stopOpacity={0}/>
+                    <stop offset="5%" stopColor="#a05b38" stopOpacity={0.1}/>
+                    <stop offset="95%" stopColor="#a05b38" stopOpacity={0}/>
                   </linearGradient>
                   <linearGradient id="colorCompletadas" x1="0" y1="0" x2="0" y2="1">
                     <stop offset="5%" stopColor="#10b981" stopOpacity={0.1}/>
@@ -238,7 +238,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ workOrders, inventory, pur
                   contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
                 />
                 <Legend iconType="circle" />
-                <Area type="monotone" dataKey="creadas" name="OTs Creadas" stroke="#2D666D" strokeWidth={3} fillOpacity={1} fill="url(#colorCreadas)" />
+                <Area type="monotone" dataKey="creadas" name="OTs Creadas" stroke="#a05b38" strokeWidth={3} fillOpacity={1} fill="url(#colorCreadas)" />
                 <Area type="monotone" dataKey="completadas" name="OTs Completadas" stroke="#10b981" strokeWidth={3} fillOpacity={1} fill="url(#colorCompletadas)" />
               </AreaChart>
             </ResponsiveContainer>
@@ -263,7 +263,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ workOrders, inventory, pur
                     dataKey="value"
                     >
                     {spendChartData.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={['#2D666D', '#3e8690', '#5ba3ac', '#8bc4ca'][index % 4]} />
+                        <Cell key={`cell-${index}`} fill={['#a05b38', '#b56f47', '#c5875e', '#d6a886'][index % 4]} />
                     ))}
                     </Pie>
                     <Tooltip formatter={(value: number) => `$${value.toLocaleString()}`} />
